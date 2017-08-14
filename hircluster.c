@@ -589,7 +589,7 @@ static cluster_node *node_get_with_nodes(
 	}
 	else {
 		if(count_port >= 1) {
-			node->port = hi_atoi(port[0]);
+			node->port = hi_atoi(port[0], sdslen(port[0]));
 		}
 
 		sdsfreesplitres(port, count_port);
